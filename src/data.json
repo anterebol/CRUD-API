@@ -1,56 +1,20 @@
 {
-  "id_1111": {
-    "id": "id_1111",
-    "username": "name",
+  "828d4c63-b4fb-4bbb-95d2-db34072d67d9": {
+    "id": "828d4c63-b4fb-4bbb-95d2-db34072d67d9",
+    "username": "Masha",
     "age": 10,
-    "hobbies": "string"
+    "hobbies": "tennis"
   },
-  "id_2222": {
-    "id": "id_2222",
-    "username": "name",
-    "age": 10,
-    "hobbies": "string"
+  "ab69b983-6f50-4ec4-933b-262ee0014a11": {
+    "id": "ab69b983-6f50-4ec4-933b-262ee0014a11",
+    "username": "Rembo",
+    "age": 25,
+    "hobbies": "socket"
   },
-  "id_u5zp": {
-    "id": "id_u5zp",
-    "username": "value",
-    "age": 10,
-    "hobbies": "IT"
-  },
-  "id_k7tt": {
-    "id": "id_k7tt",
-    "username": "value",
-    "age": 10,
-    "hobbies": "IT"
-  },
-  "id_gysd": {
-    "id": "id_gysd",
-    "username": "value",
-    "age": 10,
-    "hobbies": "IT"
-  },
-  "id_jesb": {
-    "id": "id_jesb",
-    "username": "Aleks",
-    "age": 26,
-    "hobbies": "IT"
-  },
-  "id_zd5p": {
-    "id": "id_zd5p",
-    "username": "Aleks",
-    "age": 26,
-    "hobbies": "IT"
-  },
-  "id_6224": {
-    "id": "id_6224",
-    "username": "Aleks",
-    "age": 26,
-    "hobbies": "IT"
-  },
-  "id_n3zo": {
-    "userId": "id_n3zo",
-    "username": "Valik",
-    "age": 30,
-    "hobbies": "worker"
+  "043bb286-db96-41e9-adef-b7939c1d8924": {
+    "id": "043bb286-db96-41e9-adef-b7939c1d8924",
+    "username": "Roma",
+    "age": 25,
+    "hobbies": "footbal"
   }
 }
