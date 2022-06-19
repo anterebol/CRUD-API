@@ -5,8 +5,8 @@
   "type": "commonJs",
   "main": "dist/app.js",
   "scripts": {
-    "start": "tsc && copy src\\data.json dist && node dist/app.js",
-    "dev": "nodemon ./src/app.ts",
+    "start:prod": "tsc && copy src\\data.json dist && node dist/app.js",
+    "start:dev": "nodemon ./src/app.ts",
     "first-test": "ts-mocha ./src/test/first-scene.ts",
     "second-test": "ts-mocha ./src/test/second-test.ts",
     "third-test": "ts-mocha ./src/test/last-test.ts"
