@@ -18,7 +18,7 @@ export function createId() {
   return uuid.v4();
 }
 
-function updateDB(data: JSON, code: number, res: any, user: {}, status) {
+function updateDB(data: JSON, code: number, res: any, user: {}, status: string) {
   fsPromise.writeFile(path.join(__dirname, 'data.json'), JSON.stringify(data, null, 2)).then(() => {
     const data = {
       message: 'User ' + status,
@@ -142,7 +142,6 @@ export const server = http.createServer(async (req, res) => {
         }
       break;
     case req.url === `/api/users/${userId}` &&  req.method === 'DELETE':
-      console.log(userId)
       if (checkUuid(userId) && userId.length === 36) {
         if (dataBase[userId]) {
           delete dataBase[userId];
@@ -161,7 +160,5 @@ export const server = http.createServer(async (req, res) => {
       res.end();
       break;
   }
-
 })
 server.listen(PORT);
-server;
