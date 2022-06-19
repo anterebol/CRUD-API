@@ -1,0 +1,38 @@
+{
+  "c1df7be1-d173-45cb-b2cd-7b4720a88f09": {
+    "id": "c1df7be1-d173-45cb-b2cd-7b4720a88f09",
+    "username": "name38",
+    "age": 38,
+    "hobbies": "IT"
+  },
+  "71621ec1-5866-4ff9-93ff-b373ead1f3fb": {
+    "id": "71621ec1-5866-4ff9-93ff-b373ead1f3fb",
+    "username": "name23",
+    "age": 23,
+    "hobbies": "listen music"
+  },
+  "f2442e6b-73a3-433c-bb46-c29f53019710": {
+    "id": "f2442e6b-73a3-433c-bb46-c29f53019710",
+    "username": "name27",
+    "age": 27,
+    "hobbies": "builder"
+  },
+  "89a76021-21e0-4235-bc9a-1688b0b12e25": {
+    "id": "89a76021-21e0-4235-bc9a-1688b0b12e25",
+    "username": "name36",
+    "age": 36,
+    "hobbies": "gamer"
+  },
+  "b2f7006d-ec14-4bcc-8b02-2fea831adfea": {
+    "id": "b2f7006d-ec14-4bcc-8b02-2fea831adfea",
+    "username": "name18",
+    "age": 18,
+    "hobbies": "builder"
+  },
+  "c7cf0c97-f72b-49d3-aa7f-4ac757be4c41": {
+    "id": "c7cf0c97-f72b-49d3-aa7f-4ac757be4c41",
+    "username": "name8",
+    "age": 8,
+    "hobbies": "gamer"
+  }
+}
