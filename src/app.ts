@@ -4,6 +4,7 @@ import path from 'path';
 import http from 'http';
 import Emmit from 'events';
 import dotenv from 'dotenv';
+
 let dataBase = require('./data.json');
 
 dotenv.config();
@@ -25,6 +26,7 @@ function updateDB(data: JSON, code: number, res: any, user: {}, status) {
         ...user
       }
     }
+    console.log(data);
     res.writeHead(code, 'ok', {'content-type': 'application/json'});
     res.write(JSON.stringify(data));
     res.end();
@@ -42,7 +44,7 @@ export const server = http.createServer(async (req, res) => {
   switch (true) {
     case req.url === '/api/users' && req.method === 'GET':
       try {
-        res.writeHead( 200, 'Ok', {'content-type' : 'JSON'});
+        res.writeHead( 200, 'Ok', {'content-type' : 'aplication/json'});
         res.write(JSON.stringify(dataBase));
         res.end();
       } catch {
@@ -86,7 +88,7 @@ export const server = http.createServer(async (req, res) => {
             dataBase[id] = { ...user };
             updateDB(dataBase, 201, res, user, 'added')
           } else {
-            res.writeHead(404, 'Bad Request, body is invalid', {'content-type': 'application/json'});
+            res.writeHead(400, 'Bad Request, body is invalid', {'content-type': 'application/json'});
             res.end();
           }
         });
@@ -126,6 +128,9 @@ export const server = http.createServer(async (req, res) => {
               req.on('end', () => {
                 putEmmiter.emit('put_emmit');
               })
+            } else {
+              res.writeHead( 404, 'Wrong Id', {'content-type' : 'text/plain'});
+              res.end();
             }
           } else {
               res.writeHead( 400, 'Wrong Id', {'content-type' : 'text/plain'});
@@ -137,15 +142,17 @@ export const server = http.createServer(async (req, res) => {
         }
       break;
     case req.url === `/api/users/${userId}` &&  req.method === 'DELETE':
+      console.log(userId)
       if (checkUuid(userId) && userId.length === 36) {
         if (dataBase[userId]) {
-          const { username, age, hobbies } = dataBase[userId];
-          const user = { id: userId, username, age, hobbies }
           delete dataBase[userId];
-          updateDB(dataBase, 200, res, user, 'Delete');
+          updateDB(dataBase, 204, res, {}, 'Deleted');
+        } else {
+          res.writeHead( 404, 'Wrong Id', {'content-type' : 'text/plain'});
+          res.end();
         }
       } else {
-        res.writeHead( 400, 'Wrong Id', {'content-type' : 'text/plain'});
+        res.writeHead( 400, 'Incorrect id', {'content-type' : 'text/plain'});
         res.end();
       }
       break;

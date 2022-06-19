@@ -2,14 +2,14 @@
   "name": "crud-api",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+  "type": "commonJs",
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && copy src\\data.json dist && node dist/app.js",
     "dev": "nodemon ./src/app.ts",
-    "testPost": "ts-mocha ./src/test/post.ts",
-    "testGet": "ts-mocha ./src/test/get.ts"
-
+    "first-test": "ts-mocha ./src/test/first-scene.ts",
+    "second-test": "ts-mocha ./src/test/second-test.ts",
+    "third-test": "ts-mocha ./src/test/last-test.ts"
   },
   "repository": {
     "type": "git",
@@ -23,19 +23,18 @@
   },
   "homepage": "https://github.com/anterebol/CRUD-API#readme",
   "dependencies": {
-    "@types/uuid": "^8.3.4",
+    "dotenv": "^16.0.1",
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
-    "dotenv": "^16.0.1",
     "mocha": "^10.0.0",
-    "nodemon": "^2.0.16",
     "ts-mocha": "^10.0.0",
     "ts-node": "^10.8.1",
+    "nodemon": "^2.0.16",
     "typescript": "^4.7.3",
+    "@types/uuid": "^8.3.4",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@types/mocha": "^9.1.1",
-    "typescript-require": "^0.3.0"
+    "@types/mocha": "^9.1.1"
   }
 }
